@@ -65,6 +65,9 @@ struct CounterView: View {
                     .padding()
             }
         }
+        .onAppear(perform: {
+            store.send(.factButtonTapped)
+        })
     }
 }
 

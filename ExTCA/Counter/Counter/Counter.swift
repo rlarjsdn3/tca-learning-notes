@@ -24,7 +24,7 @@ struct Counter {
     enum Action {
         case decrementButtonTapped
         case factButtonTapped
-        case factResponse(String)
+        case factResponse(Result<String, Error>)
         case incrementButtonTapped
         case timerTick
         case toggleTimerButtonTapped
@@ -49,14 +49,18 @@ struct Counter {
                 state.fact = nil
                 state.isLoading = true
                 return .run { [count = state.count] send in
-                    if let fact = try? await numberFact.fetch(count) {
-                        await send(.factResponse(fact))
-                    }
+                    await send(
+                        .factResponse(Result { try await self.numberFact.fetch(count) }),
+                        animation: .default
+                    )
                 }
                 
-            case let .factResponse(fact):
+            case let .factResponse(.success(fact)):
                 state.fact = fact
                 state.isLoading = false
+                return .none
+                
+            case .factResponse(.failure):
                 return .none
                 
             case .incrementButtonTapped:

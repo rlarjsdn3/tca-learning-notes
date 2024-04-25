@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Counter/Counter.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:WeatherSearch/WeatherSearch.xcodeproj">
+   </FileRef>
 </Workspace>

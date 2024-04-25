@@ -11,11 +11,10 @@ import SwiftUI
 @main
 struct CounterApp: App {
     
-    // MARK: - Properties
-    static let store = Store(initialState: Counter.State()) {
+    // MARK: - Store
+    static let store = StoreOf<Counter>(initialState: Counter.State()) {
         Counter()
-    } withDependencies: { values in
-        values.numberFact.fetch = { "\(values) is a good number Brent" }
+            ._printChanges()
     }
     
     var body: some Scene {
