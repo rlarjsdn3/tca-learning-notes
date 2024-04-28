@@ -1,0 +1,155 @@
+//
+//  01-GettingStarted-Animations.swift
+//  CaseStudies
+//
+//  Created by 김건우 on 4/27/24.
+//
+
+import ComposableArchitecture
+import SwiftUI
+
+@Reducer
+struct Animations {
+    
+    // MARK: - State
+    @ObservableState
+    struct State: Equatable {
+        @Presents var alert: AlertState<Action.Alert>?
+        var circleCenter: CGPoint?
+        var circleColor = Color.black
+        var isCircleScaled = false
+    }
+    
+    // MARK: - Action
+    enum Action {
+        case alert(PresentationAction<Alert>)
+        case circleScaleToggleChanged(Bool)
+        case rainbowButtonTapped
+        case resetButtonTapped
+        case setColor(Color)
+        case tapped(CGPoint)
+        
+        @CasePathable
+        enum Alert {
+            case resetConfirmationButtonTapped
+        }
+    }
+    
+    // MARK: - Dependencies
+    @Dependency(\.continuousClock) var clock
+    
+    // MARK: - Id
+    private enum CancelID { case rainbow }
+    
+    // MARK: - Reducer
+    var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .alert(.presented(.resetConfirmationButtonTapped)):
+                state = State()
+                return .cancel(id: CancelID.rainbow)
+                
+            case .alert:
+                return .none
+                
+            case let .circleScaleToggleChanged(isScaled):
+                state.isCircleScaled = isScaled
+                return .none
+                
+            case .rainbowButtonTapped:
+                return .run { send in
+                    for color in [Color.red, .blue, .green, .orange, .pink, .purple, .yellow, .black] {
+                        await send(.setColor(color), animation: .linear)
+                        try await self.clock.sleep(for: .seconds(1))
+                    }
+                }
+                .cancellable(id: CancelID.rainbow)
+                
+            case .resetButtonTapped:
+                state.alert = AlertState {
+                    TextState("Reset State? ")
+                } actions: {
+                    ButtonState(
+                        role: .destructive, 
+                        action: .resetConfirmationButtonTapped) {
+                            TextState("Reset")
+                        }
+                    ButtonState(role: .cancel) {
+                        TextState("Cancel")
+                    }
+                }
+                return .none
+                
+            case let .setColor(color):
+                state.circleColor = color
+                return .none
+                
+            case let .tapped(point):
+                state.circleCenter = point
+                return .none
+            }
+        }
+        .ifLet(\.$alert, action: \.alert)
+    }
+    
+}
+
+struct AnimationsView: View {
+    
+    // MARK: - Store
+    @Bindable var store: StoreOf<Animations>
+    
+    // MARK: - Body
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Drag Circle!")
+                .padding()
+                .gesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { gesture in
+                            store.send(
+                                .tapped(gesture.location),
+                                animation: .interactiveSpring(response: 0.25, dampingFraction: 0.1)
+                            )
+                        }
+                )
+                .overlay {
+                    GeometryReader { proxy in
+                        Circle()
+                            .fill(store.circleColor)
+                            .frame(width: 50, height: 50)
+                            .scaleEffect(store.isCircleScaled ? 2 : 1)
+                            .position(
+                                x: store.circleCenter?.x ?? proxy.size.width / 2,
+                                y: store.circleCenter?.y ?? proxy.size.height / 2
+                            )
+                            .offset(y: store.circleCenter == nil ? 0 : -44)
+                    }
+                    .allowsHitTesting(false)
+                }
+            
+            Toggle(
+                "Big Mode",
+                isOn: 
+                    $store.isCircleScaled.sending(\.circleScaleToggleChanged)
+                    .animation(.interactiveSpring(response: 0.25, dampingFraction: 0.1))
+            )
+            .padding()
+            
+            Button("Rainbow") { store.send(.rainbowButtonTapped, animation: .linear) }
+                .padding([.horizontal, .bottom])
+            Button("Reset") { store.send(.resetButtonTapped) }
+                .padding([.horizontal, .bottom])
+        }
+        .alert($store.scope(state: \.alert, action: \.alert))
+        .navigationTitle("Animations")
+    }
+}
+
+#Preview {
+    AnimationsView(
+        store: StoreOf<Animations>(initialState: Animations.State()) {
+            Animations()
+        }
+    )
+}
