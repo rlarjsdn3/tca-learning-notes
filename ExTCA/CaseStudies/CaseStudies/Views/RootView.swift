@@ -30,6 +30,54 @@ struct RootView: View {
                             }
                         )
                     }
+                    
+                    NavigationLink("Bindings Basic") {
+                        BindingsBasicView(
+                            store: StoreOf<BindingsBasic>(initialState: BindingsBasic.State()) {
+                                BindingsBasic()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Bindings Form") {
+                        BindingsFormView(
+                            store: StoreOf<BindingsForm>(initialState: BindingsForm.State()) {
+                                BindingsForm()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Counter") {
+                        CounterDemoView(
+                            store: StoreOf<Counter>(initialState: Counter.State()) {
+                                Counter()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("TowCounters") {
+                        TwoCountersView(
+                            store: StoreOf<TwoCounters>(initialState: TwoCounters.State()) {
+                                TwoCounters()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Focus State") {
+                        FocusDemoView(
+                            store: StoreOf<FocusDemo>(initialState: FocusDemo.State()) {
+                                FocusDemo()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Optional Basics") {
+                        OptionalBasicsView(
+                            store: StoreOf<OptionalBasics>(initialState: OptionalBasics.State()) {
+                                OptionalBasics()
+                            }
+                        )
+                    }
                 } header: {
                     Text("Getting Started")
                 }
