@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1DD9382BE1D83200DFC177 /* MultipleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DD9372BE1D83200DFC177 /* MultipleDestination.swift */; };
+		9E1DD93A2BE1DC8C00DFC177 /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DD9392BE1DC8C00DFC177 /* NavigationStack.swift */; };
 		9E4473EC2BE095770028DD5B /* BindingsBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473EB2BE095770028DD5B /* BindingsBasic.swift */; };
 		9E4473EE2BE098AE0028DD5B /* BindingsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473ED2BE098AE0028DD5B /* BindingsForm.swift */; };
 		9E4473F02BE09BB10028DD5B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473EF2BE09BB10028DD5B /* Counter.swift */; };
 		9E4473F22BE09DBF0028DD5B /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473F12BE09DBF0028DD5B /* TwoCounters.swift */; };
 		9E4473F42BE09FF90028DD5B /* FocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473F32BE09FF90028DD5B /* FocusState.swift */; };
 		9E4473F62BE0A5350028DD5B /* OptionalBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473F52BE0A5350028DD5B /* OptionalBasics.swift */; };
+		9E8A64932BE3162E0042E104 /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A64922BE3162E0042E104 /* FactClient.swift */; };
+		9E8A64952BE322DD0042E104 /* NavigateAndLoadList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A64942BE322DD0042E104 /* NavigateAndLoadList.swift */; };
+		9E8A64972BE339900042E104 /* NavigateAndLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A64962BE339900042E104 /* NavigateAndLoad.swift */; };
 		9EDF7F342BDD1043001A30C7 /* CaseStudiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF7F332BDD1043001A30C7 /* CaseStudiesApp.swift */; };
 		9EDF7F362BDD1043001A30C7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF7F352BDD1043001A30C7 /* RootView.swift */; };
 		9EDF7F382BDD1045001A30C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF7F372BDD1045001A30C7 /* Assets.xcassets */; };
@@ -23,12 +28,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E1DD9372BE1D83200DFC177 /* MultipleDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDestination.swift; sourceTree = "<group>"; };
+		9E1DD9392BE1DC8C00DFC177 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		9E4473EB2BE095770028DD5B /* BindingsBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsBasic.swift; sourceTree = "<group>"; };
 		9E4473ED2BE098AE0028DD5B /* BindingsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsForm.swift; sourceTree = "<group>"; };
 		9E4473EF2BE09BB10028DD5B /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		9E4473F12BE09DBF0028DD5B /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		9E4473F32BE09FF90028DD5B /* FocusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusState.swift; sourceTree = "<group>"; };
 		9E4473F52BE0A5350028DD5B /* OptionalBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBasics.swift; sourceTree = "<group>"; };
+		9E8A64922BE3162E0042E104 /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
+		9E8A64942BE322DD0042E104 /* NavigateAndLoadList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAndLoadList.swift; sourceTree = "<group>"; };
+		9E8A64962BE339900042E104 /* NavigateAndLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAndLoad.swift; sourceTree = "<group>"; };
 		9EDF7F302BDD1043001A30C7 /* CaseStudies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseStudies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EDF7F332BDD1043001A30C7 /* CaseStudiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudiesApp.swift; sourceTree = "<group>"; };
 		9EDF7F352BDD1043001A30C7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -50,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1DD9362BE1D81C00DFC177 /* 04-Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A64942BE322DD0042E104 /* NavigateAndLoadList.swift */,
+				9E1DD9372BE1D83200DFC177 /* MultipleDestination.swift */,
+				9E8A64962BE339900042E104 /* NavigateAndLoad.swift */,
+				9E1DD9392BE1DC8C00DFC177 /* NavigationStack.swift */,
+			);
+			path = "04-Navigation";
+			sourceTree = "<group>";
+		};
 		9E4473EA2BE095510028DD5B /* 01-GettingStarted */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +126,8 @@
 			children = (
 				9EDF7F352BDD1043001A30C7 /* RootView.swift */,
 				9E4473EA2BE095510028DD5B /* 01-GettingStarted */,
+				9E1DD9362BE1D81C00DFC177 /* 04-Navigation */,
+				9E8A64922BE3162E0042E104 /* FactClient.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,13 +210,18 @@
 			files = (
 				9E4473F62BE0A5350028DD5B /* OptionalBasics.swift in Sources */,
 				9EDF7F482BDD19BA001A30C7 /* Animations.swift in Sources */,
+				9E8A64972BE339900042E104 /* NavigateAndLoad.swift in Sources */,
+				9E1DD9382BE1D83200DFC177 /* MultipleDestination.swift in Sources */,
 				9E4473F22BE09DBF0028DD5B /* TwoCounters.swift in Sources */,
 				9E4473EC2BE095770028DD5B /* BindingsBasic.swift in Sources */,
 				9EDF7F432BDD10E2001A30C7 /* AlertsAndConfirmationDialog.swift in Sources */,
 				9EDF7F362BDD1043001A30C7 /* RootView.swift in Sources */,
+				9E8A64932BE3162E0042E104 /* FactClient.swift in Sources */,
+				9E8A64952BE322DD0042E104 /* NavigateAndLoadList.swift in Sources */,
 				9E4473F42BE09FF90028DD5B /* FocusState.swift in Sources */,
 				9EDF7F342BDD1043001A30C7 /* CaseStudiesApp.swift in Sources */,
 				9E4473EE2BE098AE0028DD5B /* BindingsForm.swift in Sources */,
+				9E1DD93A2BE1DC8C00DFC177 /* NavigationStack.swift in Sources */,
 				9E4473F02BE09BB10028DD5B /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

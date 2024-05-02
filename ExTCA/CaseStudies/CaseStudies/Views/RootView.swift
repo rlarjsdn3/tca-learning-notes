@@ -81,6 +81,43 @@ struct RootView: View {
                 } header: {
                     Text("Getting Started")
                 }
+                
+                Section {
+                    NavigationLink("Naviagete & Load List") {
+                        NavigateAndLoadListView(
+                            store: StoreOf<NavigateAndLoadList>(initialState: NavigateAndLoadList.State()) {
+                                NavigateAndLoadList()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("MultipleDestination") {
+                        MultipleDestinationView(
+                            store: StoreOf<MultipleDestination>(initialState: MultipleDestination.State()) {
+                                MultipleDestination()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Navigate & Load") {
+                        NavigateAndLoadView(
+                            store: StoreOf<NavigateAndLoad>(initialState: NavigateAndLoad.State()) {
+                                NavigateAndLoad()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("NavigationStack") {
+                        NavigationDemoView(
+                            store: StoreOf<NavigationDemo>(initialState: NavigationDemo.State()) {
+                                NavigationDemo()
+                            }
+                        )
+                    }
+                } header: {
+                    Text("Navigation")
+                }
+
             }
             .navigationTitle("CaseStudies")
         }
