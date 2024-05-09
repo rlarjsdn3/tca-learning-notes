@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0000F12BECAB63007C06DB /* LongLivingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0000F02BECAB63007C06DB /* LongLivingEffect.swift */; };
+		9E0000F32BECAEDB007C06DB /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0000F22BECAEDB007C06DB /* Refreshable.swift */; };
+		9E0000F52BECB585007C06DB /* Timers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0000F42BECB585007C06DB /* Timers.swift */; };
 		9E1DD9382BE1D83200DFC177 /* MultipleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DD9372BE1D83200DFC177 /* MultipleDestination.swift */; };
 		9E1DD93A2BE1DC8C00DFC177 /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DD9392BE1DC8C00DFC177 /* NavigationStack.swift */; };
 		9E4473EC2BE095770028DD5B /* BindingsBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4473EB2BE095770028DD5B /* BindingsBasic.swift */; };
@@ -18,6 +21,10 @@
 		9E8A64932BE3162E0042E104 /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A64922BE3162E0042E104 /* FactClient.swift */; };
 		9E8A64952BE322DD0042E104 /* NavigateAndLoadList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A64942BE322DD0042E104 /* NavigateAndLoadList.swift */; };
 		9E8A64972BE339900042E104 /* NavigateAndLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A64962BE339900042E104 /* NavigateAndLoad.swift */; };
+		9E9C9BCA2BE85867001CFF7F /* LoadThenPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C9BC92BE85867001CFF7F /* LoadThenPresent.swift */; };
+		9E9C9BCC2BE85CFF001CFF7F /* PresentAndLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C9BCB2BE85CFF001CFF7F /* PresentAndLoad.swift */; };
+		9E9C9BCF2BE86023001CFF7F /* EffectsBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C9BCE2BE86023001CFF7F /* EffectsBasics.swift */; };
+		9E9C9BD12BE86A62001CFF7F /* EffectCancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9C9BD02BE86A62001CFF7F /* EffectCancellation.swift */; };
 		9EDF7F342BDD1043001A30C7 /* CaseStudiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF7F332BDD1043001A30C7 /* CaseStudiesApp.swift */; };
 		9EDF7F362BDD1043001A30C7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDF7F352BDD1043001A30C7 /* RootView.swift */; };
 		9EDF7F382BDD1045001A30C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF7F372BDD1045001A30C7 /* Assets.xcassets */; };
@@ -28,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E0000F02BECAB63007C06DB /* LongLivingEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongLivingEffect.swift; sourceTree = "<group>"; };
+		9E0000F22BECAEDB007C06DB /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		9E0000F42BECB585007C06DB /* Timers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timers.swift; sourceTree = "<group>"; };
 		9E1DD9372BE1D83200DFC177 /* MultipleDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleDestination.swift; sourceTree = "<group>"; };
 		9E1DD9392BE1DC8C00DFC177 /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
 		9E4473EB2BE095770028DD5B /* BindingsBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsBasic.swift; sourceTree = "<group>"; };
@@ -39,6 +49,11 @@
 		9E8A64922BE3162E0042E104 /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
 		9E8A64942BE322DD0042E104 /* NavigateAndLoadList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAndLoadList.swift; sourceTree = "<group>"; };
 		9E8A64962BE339900042E104 /* NavigateAndLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateAndLoad.swift; sourceTree = "<group>"; };
+		9E9C9BC92BE85867001CFF7F /* LoadThenPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadThenPresent.swift; sourceTree = "<group>"; };
+		9E9C9BCB2BE85CFF001CFF7F /* PresentAndLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAndLoad.swift; sourceTree = "<group>"; };
+		9E9C9BCE2BE86023001CFF7F /* EffectsBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsBasics.swift; sourceTree = "<group>"; };
+		9E9C9BD02BE86A62001CFF7F /* EffectCancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCancellation.swift; sourceTree = "<group>"; };
+		9E9C9BD22BE86D33001CFF7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9EDF7F302BDD1043001A30C7 /* CaseStudies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseStudies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EDF7F332BDD1043001A30C7 /* CaseStudiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudiesApp.swift; sourceTree = "<group>"; };
 		9EDF7F352BDD1043001A30C7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -66,6 +81,8 @@
 				9E8A64942BE322DD0042E104 /* NavigateAndLoadList.swift */,
 				9E1DD9372BE1D83200DFC177 /* MultipleDestination.swift */,
 				9E8A64962BE339900042E104 /* NavigateAndLoad.swift */,
+				9E9C9BC92BE85867001CFF7F /* LoadThenPresent.swift */,
+				9E9C9BCB2BE85CFF001CFF7F /* PresentAndLoad.swift */,
 				9E1DD9392BE1DC8C00DFC177 /* NavigationStack.swift */,
 			);
 			path = "04-Navigation";
@@ -84,6 +101,18 @@
 				9E4473F52BE0A5350028DD5B /* OptionalBasics.swift */,
 			);
 			path = "01-GettingStarted";
+			sourceTree = "<group>";
+		};
+		9E9C9BCD2BE86015001CFF7F /* 03-Effects */ = {
+			isa = PBXGroup;
+			children = (
+				9E9C9BCE2BE86023001CFF7F /* EffectsBasics.swift */,
+				9E9C9BD02BE86A62001CFF7F /* EffectCancellation.swift */,
+				9E0000F02BECAB63007C06DB /* LongLivingEffect.swift */,
+				9E0000F22BECAEDB007C06DB /* Refreshable.swift */,
+				9E0000F42BECB585007C06DB /* Timers.swift */,
+			);
+			path = "03-Effects";
 			sourceTree = "<group>";
 		};
 		9EDF7F272BDD1043001A30C7 = {
@@ -105,6 +134,7 @@
 		9EDF7F322BDD1043001A30C7 /* CaseStudies */ = {
 			isa = PBXGroup;
 			children = (
+				9E9C9BD22BE86D33001CFF7F /* Info.plist */,
 				9EDF7F332BDD1043001A30C7 /* CaseStudiesApp.swift */,
 				9EDF7F412BDD1066001A30C7 /* Views */,
 				9EDF7F372BDD1045001A30C7 /* Assets.xcassets */,
@@ -126,6 +156,7 @@
 			children = (
 				9EDF7F352BDD1043001A30C7 /* RootView.swift */,
 				9E4473EA2BE095510028DD5B /* 01-GettingStarted */,
+				9E9C9BCD2BE86015001CFF7F /* 03-Effects */,
 				9E1DD9362BE1D81C00DFC177 /* 04-Navigation */,
 				9E8A64922BE3162E0042E104 /* FactClient.swift */,
 			);
@@ -208,17 +239,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9C9BCF2BE86023001CFF7F /* EffectsBasics.swift in Sources */,
+				9E9C9BCA2BE85867001CFF7F /* LoadThenPresent.swift in Sources */,
+				9E0000F32BECAEDB007C06DB /* Refreshable.swift in Sources */,
 				9E4473F62BE0A5350028DD5B /* OptionalBasics.swift in Sources */,
 				9EDF7F482BDD19BA001A30C7 /* Animations.swift in Sources */,
 				9E8A64972BE339900042E104 /* NavigateAndLoad.swift in Sources */,
 				9E1DD9382BE1D83200DFC177 /* MultipleDestination.swift in Sources */,
+				9E0000F52BECB585007C06DB /* Timers.swift in Sources */,
 				9E4473F22BE09DBF0028DD5B /* TwoCounters.swift in Sources */,
 				9E4473EC2BE095770028DD5B /* BindingsBasic.swift in Sources */,
 				9EDF7F432BDD10E2001A30C7 /* AlertsAndConfirmationDialog.swift in Sources */,
+				9E9C9BD12BE86A62001CFF7F /* EffectCancellation.swift in Sources */,
 				9EDF7F362BDD1043001A30C7 /* RootView.swift in Sources */,
+				9E9C9BCC2BE85CFF001CFF7F /* PresentAndLoad.swift in Sources */,
 				9E8A64932BE3162E0042E104 /* FactClient.swift in Sources */,
 				9E8A64952BE322DD0042E104 /* NavigateAndLoadList.swift in Sources */,
 				9E4473F42BE09FF90028DD5B /* FocusState.swift in Sources */,
+				9E0000F12BECAB63007C06DB /* LongLivingEffect.swift in Sources */,
 				9EDF7F342BDD1043001A30C7 /* CaseStudiesApp.swift in Sources */,
 				9E4473EE2BE098AE0028DD5B /* BindingsForm.swift in Sources */,
 				9E1DD93A2BE1DC8C00DFC177 /* NavigationStack.swift in Sources */,
@@ -359,6 +397,7 @@
 				DEVELOPMENT_TEAM = 4DQM269FVB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaseStudies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,6 +427,7 @@
 				DEVELOPMENT_TEAM = 4DQM269FVB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaseStudies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

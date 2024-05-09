@@ -83,6 +83,51 @@ struct RootView: View {
                 }
                 
                 Section {
+                    NavigationLink("Effects Basics") {
+                        EffectsBasicsView(
+                            store: StoreOf<EffectsBasics>(initialState: EffectsBasics.State()) {
+                                EffectsBasics()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Effects Cancellation") {
+                        EffectsCancellationView(
+                            store: StoreOf<EffectsCancellation>(initialState: EffectsCancellation.State()) {
+                                EffectsCancellation()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Long Living Effects") {
+                        LongLivingEffectView(
+                            store: StoreOf<LongLivingEffect>(initialState: LongLivingEffect.State()) {
+                                LongLivingEffect()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Refreshable") {
+                        RefreshableView(
+                            store: StoreOf<Refreshable>(initialState: Refreshable.State()) {
+                                Refreshable()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Timers") {
+                        TimersView(
+                            store: StoreOf<Timers>(initialState: Timers.State()) {
+                                Timers()
+                            }
+                        )
+                    }
+                } header: {
+                    Text("Effects")
+                }
+
+                
+                Section {
                     NavigationLink("Naviagete & Load List") {
                         NavigateAndLoadListView(
                             store: StoreOf<NavigateAndLoadList>(initialState: NavigateAndLoadList.State()) {
@@ -103,6 +148,22 @@ struct RootView: View {
                         NavigateAndLoadView(
                             store: StoreOf<NavigateAndLoad>(initialState: NavigateAndLoad.State()) {
                                 NavigateAndLoad()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Sheet & Load") {
+                        LoadThenPresentView(
+                            store: StoreOf<LoadThenPresent>(initialState: LoadThenPresent.State()) {
+                                LoadThenPresent()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("Present & Load") {
+                        PresentAndLoadView(
+                            store: StoreOf<PresentAndLoad>(initialState: PresentAndLoad.State()) {
+                                PresentAndLoad()
                             }
                         )
                     }

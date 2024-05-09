@@ -83,28 +83,29 @@ struct NavigateAndLoadListView: View {
     
     // MARK: - Body
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
-            List {
-                ForEach(viewStore.rows) { row in
-                    NavigationLink(
-                        "Load optional counter that starts from \(row.count)",
-                        tag: row.id,
-                        selection: viewStore.binding(
-                            get: \.selection?.id,
-                            send: { .setNavigation(selection: $0) }
-                        )
-                    ) {
-                        IfLetStore(self.store.scope(state: \.selection?.value, action: \.counter)) {
-                            CounterView(store: $0)
-                        } else: {
-                            ProgressView()
-                        }
-                    }
-                }
-            }
-            .navigationDestination
-        }
-        .navigationTitle("Navigate and load")
+//        WithViewStore(self.store, observe: { $0 }) { viewStore in
+//            List {
+//                ForEach(viewStore.rows) { row in
+//                    NavigationLink(
+//                        "Load optional counter that starts from \(row.count)",
+//                        tag: row.id,
+//                        selection: viewStore.binding(
+//                            get: \.selection?.id,
+//                            send: { .setNavigation(selection: $0) }
+//                        )
+//                    ) {
+//                        IfLetStore(self.store.scope(state: \.selection?.value, action: \.counter)) {
+//                            CounterView(store: $0)
+//                        } else: {
+//                            ProgressView()
+//                        }
+//                    }
+//                }
+//            }
+//            .navigationDestination
+//        }
+//        .navigationTitle("Navigate and load")
+        Text("")
     }
 }
 
