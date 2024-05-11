@@ -83,6 +83,35 @@ struct RootView: View {
                 }
                 
                 Section {
+                    NavigationLink("FileStorage") {
+                        SharedStateFileStorageView(
+                            store: StoreOf<SharedStateFileStorage>(initialState: SharedStateFileStorage.State()) {
+                                SharedStateFileStorage()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("InMemory") {
+                        SharedStateInMemoryView(
+                            store: StoreOf<SharedStateInMemory>(initialState: SharedStateInMemory.State()) {
+                                SharedStateInMemory()
+                            }
+                        )
+                    }
+                    
+                    NavigationLink("UserDefaults") {
+                        SharedStateUserDefaultsView(
+                            store: StoreOf<SharedStateUserDefaults>(initialState: SharedStateUserDefaults.State()) {
+                                SharedStateUserDefaults()
+                            }
+                        )
+                    }
+                } header: {
+                    Text("Share")
+                }
+
+                
+                Section {
                     NavigationLink("Effects Basics") {
                         EffectsBasicsView(
                             store: StoreOf<EffectsBasics>(initialState: EffectsBasics.State()) {
